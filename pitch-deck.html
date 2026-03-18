@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ClawChat Hedera Agent - Pitch Deck</title>
+<style>
+@page { size: landscape; margin: 0; }
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #0a0a0a; color: #fff; }
+
+.slide {
+  width: 100vw; height: 100vh; padding: 60px 80px;
+  display: flex; flex-direction: column; justify-content: center;
+  page-break-after: always; position: relative;
+  background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 100%);
+}
+
+.slide::after {
+  content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 4px;
+  background: linear-gradient(90deg, #4a90d9, #8b5cf6, #ec4899);
+}
+
+h1 { font-size: 3.5em; font-weight: 800; margin-bottom: 20px;
+  background: linear-gradient(135deg, #4a90d9, #8b5cf6); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+h2 { font-size: 2.2em; font-weight: 700; margin-bottom: 30px; color: #e0e0e0; }
+h3 { font-size: 1.6em; font-weight: 600; margin-bottom: 15px; color: #8b5cf6; }
+p { font-size: 1.3em; line-height: 1.6; color: #b0b0b0; max-width: 900px; }
+.big-stat { font-size: 4em; font-weight: 800; color: #4a90d9; }
+.stat-label { font-size: 1.2em; color: #888; margin-top: 5px; }
+.grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; margin-top: 30px; }
+.grid-3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 30px; margin-top: 30px; }
+.card { background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 16px; padding: 30px; }
+.card h3 { margin-bottom: 10px; }
+.card p { font-size: 1.1em; }
+ul { list-style: none; padding: 0; }
+ul li { font-size: 1.2em; padding: 8px 0; color: #ccc; padding-left: 25px; position: relative; }
+ul li::before { content: '→'; position: absolute; left: 0; color: #8b5cf6; }
+.logo { font-size: 1.2em; position: absolute; top: 30px; right: 40px; color: #666; }
+.tag { display: inline-block; background: rgba(139,92,246,0.2); border: 1px solid rgba(139,92,246,0.3); border-radius: 20px; padding: 6px 16px; font-size: 0.9em; color: #8b5cf6; margin-right: 8px; }
+.compare-table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+.compare-table th { text-align: left; padding: 12px; color: #8b5cf6; border-bottom: 2px solid rgba(139,92,246,0.3); font-size: 1.1em; }
+.compare-table td { padding: 12px; color: #ccc; border-bottom: 1px solid rgba(255,255,255,0.05); font-size: 1.05em; }
+.compare-table tr:hover td { background: rgba(255,255,255,0.03); }
+.highlight { color: #4a90d9; font-weight: 700; }
+.cta { background: linear-gradient(135deg, #4a90d9, #8b5cf6); border-radius: 12px; padding: 20px 40px; display: inline-block; font-size: 1.3em; font-weight: 700; margin-top: 20px; }
+</style>
+</head>
+<body>
+
+<!-- SLIDE 1: Title -->
+<div class="slide" style="text-align: center; justify-content: center; align-items: center;">
+  <h1 style="font-size: 4.5em;">ClawChat Hedera Agent</h1>
+  <p style="font-size: 1.8em; color: #8b5cf6; margin: 20px 0;">Autonomous AI Agent Infrastructure on Hedera</p>
+  <p style="font-size: 1.2em; max-width: 700px; text-align: center;">Where AI agents autonomously transact, coordinate, and exchange value — powered by hashgraph consensus</p>
+  <div style="margin-top: 40px;">
+    <span class="tag">AI & Agents Track</span>
+    <span class="tag">OpenClaw Bounty</span>
+    <span class="tag">Hedera Apex 2026</span>
+  </div>
+  <p style="margin-top: 40px; font-size: 1em; color: #666;">Elrom Eved El Elyon — Solo Builder</p>
+</div>
+
+<!-- SLIDE 2: The Problem -->
+<div class="slide">
+  <span class="logo">ClawChat Hedera Agent</span>
+  <h2>The Problem</h2>
+  <p style="font-size: 1.5em; color: #e0e0e0; margin-bottom: 30px;">AI agents cannot autonomously transact on decentralized infrastructure</p>
+  <div class="grid">
+    <div class="card">
+      <h3>No Agent-Scale Chain</h3>
+      <p>Ethereum: $2-50 per tx. Bitcoin: 10-60 min. Neither was built for millions of micro-transactions between autonomous agents.</p>
+    </div>
+    <div class="card">
+      <h3>No Agent Discovery</h3>
+      <p>No standard protocol for agents to find each other, negotiate services, or establish trust on-chain.</p>
+    </div>
+    <div class="card">
+      <h3>No Multi-LLM Routing</h3>
+      <p>Agents are locked to single AI providers. When one fails, the entire workflow stops.</p>
+    </div>
+    <div class="card">
+      <h3>No Human Interface</h3>
+      <p>Agent-to-agent systems lack transparency. Humans cannot observe or audit autonomous behavior.</p>
+    </div>
+  </div>
+</div>
+
+<!-- SLIDE 3: The Solution -->
+<div class="slide">
+  <span class="logo">ClawChat Hedera Agent</span>
+  <h2>The Solution</h2>
+  <div class="grid">
+    <div>
+      <h3>Agent-to-Agent Commerce</h3>
+      <ul>
+        <li>Autonomous HBAR transfers</li>
+        <li>HTS token creation and management</li>
+        <li>Natural language command parsing</li>
+        <li>Multi-account operations</li>
+      </ul>
+      <h3 style="margin-top: 30px;">HCS-10 Messaging Protocol</h3>
+      <ul>
+        <li>Agent discovery via Consensus Service</li>
+        <li>Capability broadcasting</li>
+        <li>Request/response patterns</li>
+        <li>Real-time subscriptions</li>
+      </ul>
+    </div>
+    <div>
+      <h3>Multi-LLM Routing</h3>
+      <ul>
+        <li>8 providers racing in parallel</li>
+        <li>First response wins (~3x faster)</li>
+        <li>Automatic failover</li>
+        <li>Zero API keys required</li>
+      </ul>
+      <h3 style="margin-top: 30px;">ClawChat PWA</h3>
+      <ul>
+        <li>Zero-install web app</li>
+        <li>Agent flow visualization</li>
+        <li>Human observation layer</li>
+        <li>Mobile-first responsive</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- SLIDE 4: Architecture -->
+<div class="slide">
+  <span class="logo">ClawChat Hedera Agent</span>
+  <h2>Architecture</h2>
+  <pre style="font-family: monospace; font-size: 1.1em; color: #8b5cf6; background: rgba(255,255,255,0.03); padding: 30px; border-radius: 12px; line-height: 1.8;">
+┌─────────────────────────────────────────────────┐
+│              ClawChat PWA (Frontend)             │
+│    8 LLM Providers · Agent Panel · MCP Manager  │
+└───────────────────────┬─────────────────────────┘
+                        │ WebSocket / REST
+┌───────────────────────▼─────────────────────────┐
+│               ClawChat Bridge                    │
+│    NL Router · Multi-LLM Race · Command Parser  │
+└──────┬──────────────────────────────┬───────────┘
+       │                              │
+┌──────▼──────────┐    ┌─────────────▼────────────┐
+│  Hedera Agent   │    │   HCS-10 Messaging       │
+│  HBAR · HTS     │    │   Topics · Discovery     │
+│  Transfers      │    │   Agent-to-Agent Comms    │
+└──────┬──────────┘    └─────────────┬────────────┘
+       │                              │
+┌──────▼──────────────────────────────▼───────────┐
+│            Hedera Hashgraph Network              │
+│   10,000 TPS · $0.0001 fees · 3-5s finality    │
+└─────────────────────────────────────────────────┘</pre>
+</div>
+
+<!-- SLIDE 5: Why Hedera -->
+<div class="slide">
+  <span class="logo">ClawChat Hedera Agent</span>
+  <h2>Why Hedera for AI Agents</h2>
+  <table class="compare-table">
+    <tr>
+      <th>Metric</th><th>Hedera</th><th>Ethereum</th><th>Solana</th><th>Bitcoin</th>
+    </tr>
+    <tr>
+      <td>Throughput</td><td class="highlight">10,000 TPS</td><td>~30 TPS</td><td>~4,000 TPS</td><td>~7 TPS</td>
+    </tr>
+    <tr>
+      <td>Average Fee</td><td class="highlight">$0.0001</td><td>$2-50</td><td>$0.00025</td><td>$1-30</td>
+    </tr>
+    <tr>
+      <td>Finality</td><td class="highlight">3-5 seconds</td><td>12-15 min</td><td>~400ms</td><td>60+ min</td>
+    </tr>
+    <tr>
+      <td>Native Tokens</td><td class="highlight">HTS (built-in)</td><td>ERC-20 (contract)</td><td>SPL (program)</td><td>Ordinals</td>
+    </tr>
+    <tr>
+      <td>Messaging</td><td class="highlight">HCS (native)</td><td>Events (logs)</td><td>Memo field</td><td>OP_RETURN</td>
+    </tr>
+    <tr>
+      <td>Agent-Scale?</td><td class="highlight">PURPOSE-BUILT</td><td>Too expensive</td><td>Maybe</td><td>Too slow</td>
+    </tr>
+  </table>
+  <p style="margin-top: 30px; font-size: 1.3em;">Hedera's hashgraph is the <span style="color: #4a90d9;">only L1 designed for high-frequency agent transactions</span></p>
+</div>
+
+<!-- SLIDE 6: Market -->
+<div class="slide">
+  <span class="logo">ClawChat Hedera Agent</span>
+  <h2>Market Opportunity</h2>
+  <div class="grid-3" style="text-align: center;">
+    <div class="card">
+      <div class="big-stat">$2B+</div>
+      <div class="stat-label">AI Agent Tooling Market (2026)</div>
+    </div>
+    <div class="card">
+      <div class="big-stat">10M+</div>
+      <div class="stat-label">Autonomous Agents by 2027</div>
+    </div>
+    <div class="card">
+      <div class="big-stat">$0</div>
+      <div class="stat-label">Agent-native L1 infra today</div>
+    </div>
+  </div>
+  <div style="margin-top: 40px;">
+    <h3>Why Now</h3>
+    <ul>
+      <li>Anthropic, OpenAI, Google all shipping agent SDKs in 2026</li>
+      <li>MCP protocol standardizing agent-tool integration (97M SDK downloads/month)</li>
+      <li>Hedera Consensus Service enables real-time agent coordination at L1 cost</li>
+      <li>First-mover advantage: no existing agent-native commerce layer on Hedera</li>
+    </ul>
+  </div>
+</div>
+
+<!-- SLIDE 7: Demo -->
+<div class="slide" style="text-align: center; align-items: center;">
+  <span class="logo">ClawChat Hedera Agent</span>
+  <h2>Live Demo</h2>
+  <div style="margin: 30px 0;">
+    <div class="cta">sintex.ai/clawchat.html</div>
+  </div>
+  <p style="font-size: 1.3em; text-align: center;">Watch the full demo video:</p>
+  <p style="font-size: 1.5em; color: #4a90d9; margin-top: 10px;">[YouTube Link — Coming Soon]</p>
+  <div style="margin-top: 40px;">
+    <h3>Demo Flow</h3>
+    <ul style="text-align: left; max-width: 600px; margin: 0 auto;">
+      <li>Open ClawChat PWA on any device</li>
+      <li>Select Hedera Agent from agent panel</li>
+      <li>Ask "What is my HBAR balance?" in natural language</li>
+      <li>Request "Transfer 5 HBAR to 0.0.12345"</li>
+      <li>Watch autonomous agent-to-agent messaging via HCS-10</li>
+      <li>Observe transaction confirmation on Hedera testnet</li>
+    </ul>
+  </div>
+</div>
+
+<!-- SLIDE 8: Roadmap -->
+<div class="slide">
+  <span class="logo">ClawChat Hedera Agent</span>
+  <h2>Roadmap</h2>
+  <div class="grid">
+    <div>
+      <h3>Phase 1 — Now (Hackathon)</h3>
+      <ul>
+        <li>Core agent: HBAR + HTS operations</li>
+        <li>HCS-10 agent messaging</li>
+        <li>Multi-LLM routing bridge</li>
+        <li>ClawChat PWA interface</li>
+      </ul>
+      <h3 style="margin-top: 30px;">Phase 2 — Q2 2026</h3>
+      <ul>
+        <li>Agent marketplace on HCS</li>
+        <li>Payment escrow via HTS</li>
+        <li>Reputation system (ERC-8004)</li>
+        <li>10+ specialized agents</li>
+      </ul>
+    </div>
+    <div>
+      <h3>Phase 3 — Q3 2026</h3>
+      <ul>
+        <li>Cross-chain agent bridges</li>
+        <li>Autonomous portfolio management</li>
+        <li>DeFi strategy execution</li>
+        <li>Enterprise SDK release</li>
+      </ul>
+      <h3 style="margin-top: 30px;">Key Learnings</h3>
+      <ul>
+        <li>HCS-10 enables real-time agent coordination at negligible cost</li>
+        <li>Multi-LLM racing provides 3x reliability improvement</li>
+        <li>PWA deployment removes all friction for human observers</li>
+        <li>Hedera's fee structure makes micro-agent-transactions viable</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- SLIDE 9: Team & Contact -->
+<div class="slide" style="text-align: center; align-items: center;">
+  <span class="logo">ClawChat Hedera Agent</span>
+  <h1 style="font-size: 3em;">Thank You</h1>
+  <p style="font-size: 1.5em; color: #8b5cf6; margin: 20px 0;">Building the infrastructure for the agentic economy</p>
+  <div style="margin-top: 40px; text-align: left; max-width: 500px;">
+    <p><strong style="color: #fff;">Builder:</strong> Elrom Eved El Elyon</p>
+    <p><strong style="color: #fff;">GitHub:</strong> github.com/ElromEvedElElyon</p>
+    <p><strong style="color: #fff;">Demo:</strong> sintex.ai/clawchat.html</p>
+    <p><strong style="color: #fff;">X:</strong> @opencllaw</p>
+    <p><strong style="color: #fff;">Repo:</strong> github.com/ElromEvedElElyon/clawchat-hedera-agent</p>
+  </div>
+  <div style="margin-top: 40px;">
+    <span class="tag">Hedera Apex 2026</span>
+    <span class="tag">AI & Agents Track</span>
+    <span class="tag">OpenClaw Bounty</span>
+  </div>
+</div>
+
+</body>
+</html>
