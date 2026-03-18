@@ -1,0 +1,24 @@
+{
+  "name": "clawchat-hedera-agent",
+  "version": "1.0.0",
+  "description": "Multi-LLM DeFi Assistant powered by Hedera Agent Kit + ClawChat PWA",
+  "type": "module",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "dev": "tsx src/index.ts"
+  },
+  "keywords": ["hedera", "ai-agent", "defi", "multi-llm", "pwa", "clawchat"],
+  "author": "Elrom Eved El Elyon <standardbitcoin.io@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "@hashgraph/sdk": "^2.51.0",
+    "dotenv": "^16.4.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.7.0",
+    "tsx": "^4.19.0",
+    "@types/node": "^22.0.0"
+  }
+}
