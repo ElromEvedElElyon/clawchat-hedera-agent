@@ -28,7 +28,7 @@ https://sintex.ai/hedera-demo.html
 https://github.com/ElromEvedElElyon/clawchat-hedera-agent/blob/master/pitch-deck.pdf
 
 ## Demo Video
-[YouTube Link - To Be Recorded]
+https://www.youtube.com/watch?v=yYUM_RmEIYU
 
 ## Team
 Elrom Eved El Elyon — Solo Builder
